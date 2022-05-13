@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #776f6f;
+        }
+        
+        .container{
+            background-color: #000;
+            color: #eaeaea;
+            width: 80%;
+            height: 200px;
+            margin: 0 auto;
+            padding: 20px 0;
+
+
+        }
+
+        button {
+            background-color: #776f6f;
+            color: #eaeaea;
+            cursor: pointer;
+            padding: 20px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>A calcular o troco</h1>
+        <button type="button" id="btn">Comprar produto</button>
+    </div>
+
+    <script>
+        let btn = document.getElementById('btn');
+        
+        // evento
+        btn.addEventListener('click', res, false);
+        
+        //função
+        function res() {
+            let produto = prompt('Produto escolhido?');
+            let custo = Number(prompt(`Quanto custa o produto ${produto}?`));
+            let pago = Number(prompt(`Valor dado para pagmento de ${produto}`));
+
+            let troco = pago - custo;
+            
+            let resultado = window.alert(`Você comprou ${produto} que custou ${custo}.
+            Pagou R$${pago} e receberá R$${troco} de troco.
+            Volte Sempre!`)
+        }
+
+
+
+
+    </script>
+</body>
+</html>

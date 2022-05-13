@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    color: #194c61;
+    background-color: #194c61;
+    text-align: center;
+}
+
+.container{
+    background-color: #e2f6f7;
+    max-width: 500px;
+    height: 150px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+button {
+    font-size: 18px;
+    color: #e2f6f7;
+    background-color: #1c6a9e;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ » US$</h1>
+
+    <button type="button" id="btn">Converter</button>
+
+    <p id="res">Clique no botão acima para iniciar</p>
+
+    <script>
+        let cotacao = Number(prompt('Antes de mais nada. Qual a cotação do dolar agora?'));
+        let btn = document.getElementById('btn');
+        let res = document.getElementById('res');
+
+        btn.addEventListener('click', cot, false);
+
+        function cot() {
+            let valor = Number(prompt('Quantos R$ você tem na carteira?'));
+
+            let atual = valor55555/ cotacao;
+
+            res.innerHTML = `
+            Você tem R$${valor} que convertido em dolar dará US$${atual}.
+            `
+        }
+
+
+    </script>
+</body>
+</html>

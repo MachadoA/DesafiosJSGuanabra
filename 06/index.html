@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 06</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #res {
+            padding-top: 20px ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+
+    <button type="button" id="btn">Converter</button>
+
+    <section id="res"> Clique no botão👆 para iniciar</section>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let res = document.getElementById('res');
+    
+
+        // evento
+        btn.addEventListener('click', converte, false);
+
+        // função
+        function converte() {
+            let temp = Number(prompt('Digite uma temperatura em ºC (Celsius):')); 
+
+            let k = temp + 273; //não funciona com decimal
+            let f = (temp*1,8) + 32;
+
+            res.innerHTML =`
+            <h2> A temperatura ${temp}ºC, corresponde a ... </h2>
+            <p> ${k}ºK (Kelvin).</p>
+            <p> ${f}ºF (Fahrenheit).</p>
+            `
+
+        }
+    </script>
+</body>
+</html>
